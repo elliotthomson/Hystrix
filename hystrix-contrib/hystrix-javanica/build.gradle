@@ -27,7 +27,7 @@ compileAjcTestJava {
 
     doLast {
         ant.taskdef(resource: "org/aspectj/tools/ant/taskdefs/aspectjTaskdefs.properties", classpath: configurations.ajtools.asPath)
-        ant.iajc(source: "11", target: "11",
+        ant.iajc(source: "11", target: "11", compliance: "11",
                 destDir: "${sourceSets.ajcTest.output.classesDirs.files.first().absolutePath}", maxmem: "512m", fork: "true",
                 classpath: "${sourceSets.main.output.classesDirs.files.first()absolutePath};${configurations.testCompileClasspath.asPath}")
                 {
@@ -45,7 +45,7 @@ compileAjcJava {
 
     doLast {
         ant.taskdef(resource: "org/aspectj/tools/ant/taskdefs/aspectjTaskdefs.properties", classpath: configurations.ajtools.asPath)
-        ant.iajc(source: "${sourceCompatibility}", target: "${targetCompatibility}",
+        ant.iajc(source: "${sourceCompatibility}", target: "${targetCompatibility}", compliance: "${sourceCompatibility}",
                 destDir: "${sourceSets.ajc.output.classesDirs.files.first().absolutePath}", maxmem: "512m", fork: "true", "showWeaveInfo": "true",
                 classpath: "${configurations.compileClasspath.asPath}")
 
