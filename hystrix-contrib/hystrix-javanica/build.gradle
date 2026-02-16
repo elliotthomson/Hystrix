@@ -104,9 +104,10 @@ dependencies {
     testImplementation "org.springframework:spring-context:$springframeworkVesion"
     testImplementation "org.springframework:spring-aop:$springframeworkVesion"
     testImplementation "org.springframework:spring-test:$springframeworkVesion"
-    testImplementation 'cglib:cglib:3.1'
+    testImplementation 'cglib:cglib:3.3.0'
     testImplementation 'org.mockito:mockito-all:1.9.5'
     testImplementation 'log4j:log4j:1.2.17'
     testImplementation 'org.slf4j:slf4j-log4j12:1.7.7'
     testImplementation 'com.tngtech.java:junit-dataprovider:1.10.2'
+    testImplementation 'javax.annotation:javax.annotation-api:1.3.2'
 }
