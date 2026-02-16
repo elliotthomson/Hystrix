@@ -1,5 +1,26 @@
 # Hystrix Releases #
 
+### Version 1.5.19 ###
+
+* Upgraded minimum Java version from Java 8 to Java 11
+* Updated GitHub Actions CI workflows to use Java 11
+* Updated hystrix-core dependencies:
+  - archaius-core: 0.4.1 -> 0.7.7
+  - rxjava: 1.2.0 -> 1.3.8
+  - slf4j-api: 1.7.0 -> 1.7.36
+  - HdrHistogram: 2.1.9 -> 2.1.12
+* Updated hystrix-javanica dependencies:
+  - AspectJ: 1.8.6 -> 1.9.7 (required for Java 11 bytecode support)
+  - Spring Framework: 4.3.2.RELEASE -> 5.3.27
+  - Guava: 15.0 -> 31.1-jre
+  - commons-lang3: 3.1 -> 3.12.0
+  - ASM: 5.0.4 -> 9.4 (required for Java 11 bytecode support)
+  - jsr305: 2.0.0 -> 3.0.2
+* Updated hystrix-clj dependencies:
+  - Clojure: 1.7.0 -> 1.11.1
+* Updated AspectJ compilation source/target from 1.8 to 11
+* Set sourceCompatibility and targetCompatibility to Java 11 in root build.gradle
+
 ### Version 1.5.13 ([Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.netflix.hystrix%22%20AND%20v%3A%221.5.13%22), [Bintray](https://bintray.com/netflixoss/maven/Hystrix/1.5.13/)) ###
 
 - [Pull 1621](https://github.com/Netflix/Hystrix/pull/1621) Fixed bug where an unsubscription of a command in half-open state leaves circuit permanently open
@@ -1042,4 +1063,4 @@ See the module README for more information: https://github.com/Netflix/Hystrix/t
 
 ### Version 1.0.0 ###
 
-* Initial open source release 
+* Initial open source release  

@@ -19,7 +19,7 @@ repositories {
 
 dependencies {
     api project(':hystrix-core')
-    implementation 'org.clojure:clojure:1.7.0'
+    implementation 'org.clojure:clojure:1.11.1'
 }
 
 /*
